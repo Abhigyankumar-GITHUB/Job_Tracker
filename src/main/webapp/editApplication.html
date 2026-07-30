@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Application | Job Tracker</title>
+
+    <link rel="stylesheet" href="css/editApplication.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+
+                <h2>Job Tracker</h2>
+
+            </div>
+
+
+            <nav class="nav-menu">
+
+                <a href="dashboard.html" class="nav-link">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="add-application.html" class="nav-link">
+                    <i class="fa-regular fa-circle-plus"></i>
+                    <span>Add Application</span>
+                </a>
+
+                <a href="viewApplications" class="nav-link active">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>View Applications</span>
+                </a>
+
+            </nav>
+
+
+            <div class="logout">
+
+                <a href="login.html">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="main-content">
+
+
+            <!-- TOP HEADER -->
+
+            <header class="top-header">
+
+                <div class="menu-icon">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+
+                <div class="user-profile">
+
+                    <div class="profile-icon">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+
+                    <div class="user-info">
+                        <h4>Welcome, User</h4>
+                        <p>yuvi.lohani620@gmail.com</p>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+
+                </div>
+
+            </header>
+
+
+            <!-- ================= PAGE CONTENT ================= -->
+
+            <section class="content-area">
+
+
+                <!-- PAGE TITLE -->
+
+                <div class="page-heading">
+
+                    <h1>Edit Application</h1>
+
+                    <div class="breadcrumb">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        <span>›</span>
+
+                        <a href="viewApplications">
+                            View Applications
+                        </a>
+
+                        <span>›</span>
+
+                        <p>Edit Application</p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= EDIT FORM CARD ================= -->
+
+                <div class="application-card">
+
+
+                    <div class="card-heading">
+
+                        <div class="heading-icon">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+
+                        <div>
+                            <h2>Application Details</h2>
+                            <p>Update the details of your job application</p>
+                        </div>
+
+                    </div>
+
+
+                    <!--
+                        Later action="updateApplication" servlet ko call karega.
+                    -->
+
+                    <form action="updateApplication" method="POST">
+
+
+                        <!-- Application ID -->
+                        <!-- Later Servlet actual ID yaha set karega -->
+
+                        <input type="hidden"
+                               name="id"
+                               value="1">
+
+
+                        <div class="form-grid">
+
+
+                            <!-- COMPANY NAME -->
+
+                            <div class="form-group">
+
+                                <label for="companyName">
+                                    Company Name <span>*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="companyName"
+                                    name="companyName"
+                                    value="Infosys"
+                                    required>
+
+                            </div>
+
+
+                            <!-- JOB ROLE -->
+
+                            <div class="form-group">
+
+                                <label for="jobRole">
+                                    Job Role <span>*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="jobRole"
+                                    name="jobRole"
+                                    value="Software Developer"
+                                    required>
+
+                            </div>
+
+
+                            <!-- LOCATION -->
+
+                            <div class="form-group">
+
+                                <label for="location">
+                                    Location <span>*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="location"
+                                    name="location"
+                                    value="Bangalore"
+                                    required>
+
+                            </div>
+
+
+                            <!-- APPLIED DATE -->
+
+                            <div class="form-group">
+
+                                <label for="appliedDate">
+                                    Applied Date <span>*</span>
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="appliedDate"
+                                    name="appliedDate"
+                                    value="2026-07-28"
+                                    required>
+
+                            </div>
+
+
+                            <!-- STATUS -->
+
+                            <div class="form-group">
+
+                                <label for="status">
+                                    Status <span>*</span>
+                                </label>
+
+                                <select
+                                    id="status"
+                                    name="status"
+                                    required>
+
+                                    <option value="Applied" selected>
+                                        Applied
+                                    </option>
+
+                                    <option value="Interview">
+                                        Interview
+                                    </option>
+
+                                    <option value="Selected">
+                                        Selected
+                                    </option>
+
+                                    <option value="Rejected">
+                                        Rejected
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- JOB LINK -->
+
+                            <div class="form-group">
+
+                                <label for="jobLink">
+                                    Job Link
+                                </label>
+
+                                <input
+                                    type="url"
+                                    id="jobLink"
+                                    name="jobLink"
+                                    value="https://www.infosys.com/careers">
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- NOTES -->
+
+                        <div class="form-group notes-group">
+
+                            <label for="notes">
+                                Notes
+                            </label>
+
+                            <textarea
+                                id="notes"
+                                name="notes"
+                                rows="5">Applied through company website.</textarea>
+
+                        </div>
+
+
+                        <!-- ================= BUTTONS ================= -->
+
+                        <div class="form-actions">
+
+
+                            <button
+                                type="submit"
+                                class="update-btn">
+
+                                <i class="fa-solid fa-check"></i>
+
+                                Update Application
+
+                            </button>
+
+
+                            <a
+                                href="viewApplications"
+                                class="cancel-btn">
+
+                                <i class="fa-solid fa-xmark"></i>
+
+                                Cancel
+
+                            </a>
+
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

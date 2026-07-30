@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Job Tracker</title>
+    <link rel="stylesheet" href="css/login.css">
+     <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-icon">
+                <i class="fa-solid fa-briefcase"></i>
+            </span>
+            Job Tracker
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#features">Features</a>
+            <a href="index.html#about">About</a>
+            <a href="login.html" class="nav-login">Login</a>
+            <a href="register.html" class="nav-register">Register</a>
+        </div>
+    </nav>
+
+    <!--Login section-->
+    <section class="login-section">
+        <div class="login-container">
+            <div class="login-left">
+                <h1>Welcome Back!</h1>
+                <p>
+                    Login to continue your job applications.
+                </p>
+                <img src ="images/login-image.jpeg" alt="Job Tracker Login">
+
+            </div>
+
+            <div class="login-right">
+                <h2>Login to your Account</h2>
+                <p class="login-description">
+                     Enter your credentials to access your account
+                </p>
+
+                <!--Login form-->
+                <form method="post" action="login">
+                    <!--Email-->
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email" placeholder="Enter your Email" required>
+                    </div>
+
+                    <!--Password-->
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <!--Remember / Forgot password-->
+                    <div class="login-options">
+                        <label class="remember">
+                            <input type="checkbox" name="remember">
+                            Remember Me
+                        </label>
+                        <a href="#" class="forgot-password">Forgot Password</a>
+                    </div>
+
+                    <!--Login Button-->
+                    <button type="submit" class="login-button">Login &rarr;</button>
+
+
+                </form>
+                <!--Register Link-->
+                <div class="register-text">
+                    Don't have an account?
+                    <a href="register.html">Register here</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--Features-->
+    <section class="login-features">
+        <div class="login-feature">
+            <div class="feature-icon">
+                <i class="fa-solid fa-chart-gantt"></i>
+            </div>
+            <h3>Track Applications</h3>
+            <p>Keep all your applications organized in one place.</p>
+        </div>
+
+        <div class="login-feature">
+            <div class="feature-icon">
+                <i class="fa-brands fa-watchman-monitoring"></i>
+            </div>
+            <h3>Monitor Progress</h3>
+            <p>
+                Track the status and progress of your applications.
+            </p>
+        </div>
+
+        <div class="login-feature">
+            <div class="feature-icon">
+                <i class="fa-solid fa-building-lock"></i>
+            </div>
+            <h3>Secure & Private</h3>
+            <p>Your account and application data stay secure.</p>
+
+        </div>
+    </section>
+
+    <!--footer-->
+    <footer class="footer">
+        <p>
+            &copy; 2026 Job Tracker | All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>

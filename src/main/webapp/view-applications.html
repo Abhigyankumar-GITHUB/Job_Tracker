@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Applications | Job Tracker</title>
+     <link rel="stylesheet" href="css/view-applications.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+           <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-briefcase"></i>
+            </div>
+
+            <h2>Job Tracker</h2>
+        </div>
+
+
+        <nav class="nav-menu">
+
+            <a href="dashboard.html" class="nav-link">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="add-application.html" class="nav-link">
+                <i class="fa-regular fa-circle-plus"></i>
+                <span>Add Application</span>
+            </a>
+
+            <a href="view-applications.html" class="nav-link active">
+                <i class="fa-solid fa-briefcase"></i>
+                <span>View Applications</span>
+            </a>
+
+        </nav>
+
+
+        <div class="logout">
+            <a href="#">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+
+        <!-- ================= TOP HEADER ================= -->
+
+        <header class="top-header">
+
+            <div class="page-title">
+
+                <h1>View Applications</h1>
+
+                <p>
+                    Track and manage all your job applications
+                </p>
+
+            </div>
+
+
+            <div class="user-profile">
+
+                <div class="profile-icon">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+
+                <div class="user-info">
+
+                    <h4>Welcome, User</h4>
+
+                    <p>user@gmail.com</p>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= CONTENT AREA ================= -->
+
+        <section class="content-area">
+
+
+            <div class="applications-card">
+
+
+                <!-- CARD HEADER -->
+
+                <div class="card-header">
+
+                    <div class="card-title-section">
+
+                        <div class="application-icon">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+
+                        <div>
+
+                            <h2>My Applications</h2>
+
+                            <p>
+                                Here's a list of all the jobs you have applied for
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SEARCH + FILTER -->
+
+                    <div class="card-actions">
+
+                        <div class="search-box">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                            <input
+                                    type="text"
+                                    placeholder="Search applications...">
+
+                        </div>
+
+
+                        <button class="filter-btn">
+
+                            <i class="fa-solid fa-filter"></i>
+
+                            Filter
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= APPLICATION TABLE ================= -->
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                        <tr>
+
+                            <th>Company</th>
+
+                            <th>Job Role</th>
+
+                            <th>Location</th>
+
+                            <th>Applied Date</th>
+
+                            <th>Status</th>
+
+                            <th>Actions</th>
+
+                        </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+
+                        <!--
+                            TEMPORARY SAMPLE ROWS
+
+                            Later ViewApplicationsServlet will generate
+                            these rows from MySQL database.
+                        -->
+
+
+                        <!-- INFOSYS -->
+
+                        <tr>
+
+                            <td>
+
+                                <div class="company">
+
+                                    <div class="company-logo blue-logo">
+                                        IN
+                                    </div>
+
+                                    <span>Infosys</span>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>Java Developer</td>
+
+
+                            <td>Bangalore, Karnataka</td>
+
+
+                            <td>30 Jul 2026</td>
+
+
+                            <td>
+
+                                <span class="status applied">
+                                    Applied
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <div class="action-buttons">
+
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="delete-btn">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- TCS -->
+
+                        <tr>
+
+                            <td>
+
+                                <div class="company">
+
+                                    <div class="company-logo pink-logo">
+                                        TCS
+                                    </div>
+
+                                    <span>TCS</span>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>Software Engineer</td>
+
+
+                            <td>Pune, Maharashtra</td>
+
+
+                            <td>28 Jul 2026</td>
+
+
+                            <td>
+
+                                <span class="status interview">
+                                    Interview
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <div class="action-buttons">
+
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="delete-btn">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- WIPRO -->
+
+                        <tr>
+
+                            <td>
+
+                                <div class="company">
+
+                                    <div class="company-logo purple-logo">
+                                        W
+                                    </div>
+
+                                    <span>Wipro</span>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>Backend Developer</td>
+
+
+                            <td>Noida, Uttar Pradesh</td>
+
+
+                            <td>25 Jul 2026</td>
+
+
+                            <td>
+
+                                <span class="status selected">
+                                    Selected
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <div class="action-buttons">
+
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="delete-btn">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- ACCENTURE -->
+
+                        <tr>
+
+                            <td>
+
+                                <div class="company">
+
+                                    <div class="company-logo accenture-logo">
+                                        &gt;
+                                    </div>
+
+                                    <span>Accenture</span>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>Associate Developer</td>
+
+
+                            <td>Hyderabad, Telangana</td>
+
+
+                            <td>20 Jul 2026</td>
+
+
+                            <td>
+
+                                <span class="status rejected">
+                                    Rejected
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <div class="action-buttons">
+
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="delete-btn">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- CAPGEMINI -->
+
+                        <tr>
+
+                            <td>
+
+                                <div class="company">
+
+                                    <div class="company-logo cyan-logo">
+                                        C
+                                    </div>
+
+                                    <span>Capgemini</span>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>Software Engineer</td>
+
+
+                            <td>Bangalore, Karnataka</td>
+
+
+                            <td>18 Jul 2026</td>
+
+
+                            <td>
+
+                                <span class="status applied">
+                                    Applied
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <div class="action-buttons">
+
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="delete-btn">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+
+                <!-- ================= TABLE FOOTER ================= -->
+
+                <div class="table-footer">
+
+                    <p>
+                        Showing 1 to 5 of 5 applications
+                    </p>
+
+
+                    <div class="pagination">
+
+                        <button class="page-arrow">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+
+                        <button class="page-number active-page">
+                            1
+                        </button>
+
+                        <button class="page-arrow">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+</body>
+</html>

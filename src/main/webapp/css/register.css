@@ -1,0 +1,497 @@
+@charset "UTF-8";
+/* =========================================
+   REGISTER PAGE
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fb;
+    color: #1f2937;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.register-container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+}
+
+
+/* =========================================
+   LEFT SIDE
+========================================= */
+
+.register-left {
+    width: 50%;
+    min-height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #16213e,
+        #243b65
+    );
+
+    color: white;
+
+    padding: 45px 7%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.register-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 26px;
+    font-weight: bold;
+}
+
+
+.logo-icon {
+    width: 45px;
+    height: 45px;
+
+    background-color: #3b82f6;
+
+    border-radius: 9px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.logo-icon i {
+    color: white;
+    font-size: 21px;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.left-content {
+    margin-top: 110px;
+    max-width: 520px;
+}
+
+
+.left-content h1 {
+    font-size: 48px;
+    line-height: 1.2;
+
+    margin-bottom: 22px;
+}
+
+
+.left-content h1 span {
+    color: #60a5fa;
+}
+
+
+.left-content > p {
+    color: #d1d9e6;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    margin-bottom: 38px;
+}
+
+
+/* =========================================
+   BENEFITS
+========================================= */
+
+.register-benefits {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    font-size: 16px;
+
+    color: #f1f5f9;
+}
+
+
+.check-icon {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background-color: rgba(59, 130, 246, 0.22);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.check-icon i {
+    color: #60a5fa;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   RIGHT SIDE
+========================================= */
+
+.register-right {
+    width: 50%;
+    min-height: 100vh;
+
+    background-color: #f8fafc;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+}
+
+
+/* =========================================
+   REGISTER CARD
+========================================= */
+
+.register-card {
+    width: 100%;
+    max-width: 470px;
+
+    background-color: white;
+
+    padding: 38px 42px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   REGISTER HEADING
+========================================= */
+
+.register-heading {
+    margin-bottom: 28px;
+}
+
+
+.register-heading h2 {
+    color: #172554;
+
+    font-size: 30px;
+
+    margin-bottom: 9px;
+}
+
+
+.register-heading p {
+    color: #64748b;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+
+.form-group label {
+    display: block;
+
+    color: #334155;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================================
+   INPUT BOX
+========================================= */
+
+.input-box {
+    width: 100%;
+    height: 48px;
+
+    border: 1px solid #d7deea;
+
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 15px;
+
+    background-color: #ffffff;
+
+    transition: 0.3s;
+}
+
+
+.input-box i {
+    color: #94a3b8;
+
+    font-size: 15px;
+
+    margin-right: 12px;
+}
+
+
+.input-box input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-size: 14px;
+
+    color: #1e293b;
+}
+
+
+.input-box input::placeholder {
+    color: #a0aec0;
+}
+
+
+/* INPUT FOCUS */
+
+.input-box:focus-within {
+    border-color: #3b82f6;
+
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.10);
+}
+
+
+.input-box:focus-within i {
+    color: #3b82f6;
+}
+
+
+/* =========================================
+   REGISTER BUTTON
+========================================= */
+
+.register-btn {
+    width: 100%;
+
+    border: none;
+
+    padding: 14px;
+
+    margin-top: 5px;
+
+    border-radius: 8px;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.register-btn:hover {
+    background-color: #1d4ed8;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================================
+   LOGIN TEXT
+========================================= */
+
+.login-text {
+    text-align: center;
+
+    margin-top: 22px;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+.login-text a {
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    margin-left: 4px;
+}
+
+
+.login-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   BACK TO HOME
+========================================= */
+
+.back-home {
+    text-align: center;
+
+    margin-top: 20px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+
+.back-home a {
+    color: #64748b;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.back-home a i {
+    margin-right: 7px;
+}
+
+
+.back-home a:hover {
+    color: #2563eb;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 900px) {
+
+    .register-left {
+        width: 45%;
+
+        padding: 40px 5%;
+    }
+
+
+    .register-right {
+        width: 55%;
+
+        padding: 30px;
+    }
+
+
+    .left-content {
+        margin-top: 80px;
+    }
+
+
+    .left-content h1 {
+        font-size: 38px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .register-container {
+        flex-direction: column;
+    }
+
+
+    .register-left {
+        width: 100%;
+        min-height: auto;
+
+        padding: 30px 7% 45px;
+    }
+
+
+    .left-content {
+        margin-top: 45px;
+    }
+
+
+    .left-content h1 {
+        font-size: 36px;
+    }
+
+
+    .register-benefits {
+        gap: 15px;
+    }
+
+
+    .register-right {
+        width: 100%;
+        min-height: auto;
+
+        padding: 40px 20px;
+    }
+
+
+    .register-card {
+        padding: 32px 25px;
+    }
+
+}

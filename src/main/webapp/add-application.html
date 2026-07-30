@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Application | Job Tracker</title>
+
+    <link rel="stylesheet" href="css/add-application.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-briefcase"></i>
+            </div>
+
+            <h2>Job Tracker</h2>
+
+        </div>
+
+
+        <nav class="nav-menu">
+
+            <a href="dashboard" class="nav-link">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a href="add-application.html" class="nav-link active">
+                <i class="fa-regular fa-circle-plus"></i>
+                <span>Add Application</span>
+            </a>
+
+
+            <a href="viewApplications" class="nav-link">
+                <i class="fa-solid fa-briefcase"></i>
+                <span>View Applications</span>
+            </a>
+
+        </nav>
+
+
+        <div class="logout-section">
+
+            <a href="logout" class="logout-link">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+
+        <!-- ================= TOP HEADER ================= -->
+
+        <header class="top-header">
+
+            <div class="header-title">
+
+                <h1>Add New Application</h1>
+
+                <p>
+                    Fill in the details of the job application
+                </p>
+
+            </div>
+
+
+            <div class="user-profile">
+
+                <div class="profile-icon">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+
+                <div class="profile-info">
+                    <h4>Welcome, User</h4>
+                    <p>user@gmail.com</p>
+                </div>
+
+                <i class="fa-solid fa-chevron-down arrow"></i>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= PAGE BODY ================= -->
+
+        <section class="page-content">
+
+
+            <!-- ================= APPLICATION CARD ================= -->
+
+            <div class="application-card">
+
+
+                <!-- Card Header -->
+
+                <div class="card-header">
+
+                    <div class="card-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+
+
+                    <div>
+
+                        <h2>Application Details</h2>
+
+                        <p>
+                            Enter the details of the job application you want to track
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="divider"></div>
+
+
+                <!-- ================= FORM ================= -->
+
+                <form action="addApplication" method="POST">
+
+
+                    <div class="form-grid">
+
+
+                        <!-- Company Name -->
+
+                        <div class="form-group">
+
+                            <label for="company_name">
+                                Company Name
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="company_name"
+                                name="company_name"
+                                placeholder="Enter company name"
+                                required>
+
+                        </div>
+
+
+                        <!-- Job Role -->
+
+                        <div class="form-group">
+
+                            <label for="job_role">
+                                Job Role
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="job_role"
+                                name="job_role"
+                                placeholder="Enter job role"
+                                required>
+
+                        </div>
+
+
+                        <!-- Location -->
+
+                        <div class="form-group">
+
+                            <label for="location">
+                                Location
+                            </label>
+
+                            <input
+                                type="text"
+                                id="location"
+                                name="location"
+                                placeholder="Enter location">
+
+                        </div>
+
+
+                        <!-- Applied Date -->
+
+                        <div class="form-group">
+
+                            <label for="applied_date">
+                                Applied Date
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="date"
+                                id="applied_date"
+                                name="applied_date"
+                                required>
+
+                        </div>
+
+
+                        <!-- Status -->
+
+                        <div class="form-group">
+
+                            <label for="status">
+                                Status
+                                <span>*</span>
+                            </label>
+
+                            <select
+                                id="status"
+                                name="status"
+                                required>
+
+                                <option value="Applied">Applied</option>
+
+                                <option value="Interview">
+                                    Interview
+                                </option>
+
+                                <option value="Selected">
+                                    Selected
+                                </option>
+
+                                <option value="Rejected">
+                                    Rejected
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Job Link -->
+
+                        <div class="form-group">
+
+                            <label for="job_link">
+                                Job Link
+                            </label>
+
+                            <input
+                                type="url"
+                                id="job_link"
+                                name="job_link"
+                                placeholder="Enter job posting link (optional)">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Notes -->
+
+                    <div class="form-group notes-group">
+
+                        <label for="notes">
+                            Notes
+                        </label>
+
+                        <textarea
+                            id="notes"
+                            name="notes"
+                            placeholder="Enter any notes about this application (optional)"></textarea>
+
+                    </div>
+
+
+                    <!-- ================= BUTTONS ================= -->
+
+                    <div class="form-buttons">
+
+
+                        <a href="dashboard" class="cancel-btn">
+
+                            <i class="fa-solid fa-xmark"></i>
+
+                            Cancel
+
+                        </a>
+
+
+                        <button type="submit" class="add-btn">
+
+                            <i class="fa-regular fa-floppy-disk"></i>
+
+                            Add Application
+
+                        </button>
+
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>
