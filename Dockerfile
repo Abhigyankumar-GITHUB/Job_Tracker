@@ -14,6 +14,7 @@ RUN mvn clean package -DskipTests
 
 # Stage 2: Tomcat 10 par application run karo
 FROM tomcat:10.1-jdk17-temurin
+RUN sed -i 's/port="8005" shutdown="SHUTDOWN"/port="-1" shutdown="SHUTDOWN"/' /usr/local/tomcat/conf/server.xml
 
 # Default Tomcat applications remove
 RUN rm -rf /usr/local/tomcat/webapps/*
